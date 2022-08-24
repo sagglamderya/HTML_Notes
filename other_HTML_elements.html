@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Other HTML Elements</title>
+</head>
+<body>
+<!-----------METER,PROGRESS---------->
+    <!--<meter> tag defines a scalar measurement within a known range, or a fractional value.-->
+    <label for="disk_c">Disk usage C:</label>
+    <meter id="disk_c" value="8" min="0" max="10" low="5" high="7"></meter><br>
+
+    <!--The <progress> tag represents the completion progress of a task.-->
+    <label for="progress">Progress</label>
+    <progress id="progress" max="100" value="32"></progress><br>
+<!------------SUMMARY---------------->
+    <details> <!--<details> tag specifies additional details that the user can open and close on demand-->
+    <summary>Summary</summary> <!--<summary> tag defines a visible heading for the <details> element. The heading can be clicked to view/hide the details.-->
+        <a href="#">Menu1</a>
+        <a href="#">Menu2</a>
+        <a href="#">Menu3</a>
+    </details>
+<!------------DIALOG----------------->
+    <dialog open>This is an open dialog window</dialog> <!--<dialog> tag defines a dialog box or subwindow.-->
+<!------------FIGURE----------------->
+<!--<figure> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc-->
+    <figure style="width: 128px;">
+        <img src="image.jpeg" alt="adorable bunny" height="128">
+        <figcaption style="text-align:center ;"><b>Adorable Bunny</b></figcaption>
+        <!--<figcaption> element is used to add a caption for the <figure> element.-->
+    </figure>
+<!-------------RUBY----------------->
+<!--A ruby annotation is a small extra text, attached to the main text to indicate the pronunciation or meaning of the corresponding characters. 
+This kind of annotation is often used in Japanese publications.-->
+    <ruby>
+        漢 <rt> ㄏㄢˋ </rt> <rp>your browser do not support ruby annotations</rp> <!--<rp> element that defines what to show for browsers that do not support ruby annotations-->
+    </ruby>
+<!-------------TIME----------------->  
+<!--The <time> tag defines a specific time (or datetime).-->
+<p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>  
+
+</body>
+</html>
