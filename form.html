@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body>
+    
+    <form method="post" action="#" target="_self"> 
+        <!--if "get" is used for method, inputs will seen on searchbar, instead use "post"-->
+        <!--by "_self" attribute, response is displayed in the current window-->
+        <!------------------------------------------GENERAL-------------------------------------------------------------->
+        <label for="username">Username: </label> <br>
+        <input type="text" name="username" id="username">
+        <br>
+        <label for="password">Password: </label> <br>
+        <input type="password" name="password" id="password">
+        <br>
+        <!--------------------------------------------CONTACT------------------------------------------------------>
+        <label for="email">E-mail: </label> <br>
+        <input type="email" name="email" id="email" required autocomplete="on"><!--required attribute specifies that an input field must be filled out--> 
+        <!--autocomplete attribute specifies whether a form or an input field should have autocomplete-->
+        <br>
+        <label for="tel">Telephone Number:</label><br>
+        <input type="tel" name="tel" id="tel" pattern="[0-9]{11}" placeholder="05323233232">
+        <!--placeholder attribute specifies a short hint that describes the expected value of an input field-->
+        <br>
+        <!---------------------------------------------------------------------------------------------------------->
+        <label for="number">Number of Order:</label><br>
+        <input type="number" name="number" id="number" min="1" max="10">
+        <br>
+        <label for="search">Item Name :</label><br>
+        <input type="search" name="item" id="search"><!--difference between text and search types is if search used, there will be a cross end of the bar-->
+        <br>
+        <!-----------------------------------------------DATE-------------------------------------------------------->
+        <label for="date">Date: </label><br>
+        <input type="date" name="date" id="date">
+        <br>
+        <label for="datetime-local">Local Date: </label><br>
+        <input type="datetime-local" name="datetime-local" id="datetime-local"><!--difference between datetime-local and date is datetime-local has time and date-->
+        <br>
+        <label for="month">Month: </label><br>
+        <input type="month" name="month" id="month"><!--just month and year-->
+        <br>
+        <label for="week">Week: </label><br>
+        <input type="week" name="week" id="week"><!--just week and year-->
+        <br>
+        <label for="time">Time: </label><br>
+        <input type="time" name="time" id="time"><!--just time-->
+        <br>
+        <!-----------------------------------------FILE,URL,COLOR,IMAGE-------------------------------------------------->
+        <label for="file">File: </label><br>
+        <input type="file" id="file">
+        <br>
+        <label for="URL">URL: </label><br>
+        <input type="URL" id="URL">
+        <br>
+        <label for="color">Color: </label><br>
+        <input type="color" id="color">
+        <br>
+        <label for="image">Image: </label><br>
+        <input type="image" id="image" src="image.jpeg" width="64"><!--can be used for buttons-->
+        <br>
+        <!----------------------------------CHECKBOX,RADIO,RANGE,SELECT,OPTION_GROUP------------------------------------------->
+        <label for="languages">Languages: </label><br>
+        <input type="checkbox" name="languages" id="eng"> <label for="eng">English</label><br><!--if a label for option is not set, choosing this option by clicking on its name wont be possible-->
+        <input type="checkbox" name="languages" id="turkish"> <label for="turkish">Turkish</label><br><!--number of choice is unlimited all or none options can be choosen-->
+        <input type="checkbox" name="languages" id="spanish"> <label for="spanish">Spanish</label><br>
+        ---or--- <br>
+        <select name="languages" size="3" multiple>
+            <option value="eng">English</option>
+            <option value="turkish">Turkish</option>
+            <option value="spanish">Spanish</option><!--"selected" sets a default value-->
+        </select>
+        <br>
+        Gender: <br>
+        <input type="radio" name="gender" id="male"><label for="male">Male</label> <br>
+        <input type="radio" name="gender" id="female"><label for="female">Female</label> <br> <!--if name of radio is not chosen, choosing multiple choices would be possible. If number of choices wanted to be limited, assing same name to radios-->
+        <input type="radio" name="gender" id="other"><label for="other">Other</label> <br>
+        ---or--- <br>
+        <select name="gender"><!--"size" -->
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other" selected>Other</option><!--"selected" sets a default value-->
+        </select>
+        <br>
+        <label for="range">Range: </label><br>
+        <input type="range" min="0" max="100" value="0"><!--this "value" is default value-->
+        <br>
+        Type of outfit: <br>
+        <select multiple>
+            <optgroup label="Tops">
+                <option>T-shirt</option>
+                <option>Shirt</option>
+            </optgroup>
+            <optgroup label="Bottoms">
+                <option>Pant</option>
+                <option>Skirt</option>
+            </optgroup>
+        </select>
+        <br>
+        <!-------------------------------------------------TEXT_AREA-------------------------------------------------------->
+        Comments: <br>
+        <textarea cols="30" rows="10"></textarea>
+        <br>
+        <!--------------------------------------------------DATA_LIST------------------------------------------------------->
+        Coding Languages: <br>
+        <input list="codinglanguages" >
+            <datalist id="codinglanguages">
+                <option value="Java"> <!--by setting a datalist, you can offer some choices but user also can write anything on bar-->
+                <option value="Javascript"> <!---->
+                <option value="Python"> <!--there is no closing of option (</option>)-->
+            </datalist>
+        <br>        
+        <!----------------------------------------------FIELD_SET,LEGEND----------------------------------------------------> 
+        <fieldset><!--<fieldset> element is used to group related data in a form.-->
+            <legend>Personal Information</legend><!--<legend> element defines a caption for the <fieldset> element.-->
+            Name Surname: <input type="text" /> <br>
+            Phone Number: <input type="tel" pattern="[0-9]{11}"> <br>
+            E-mail: <input type="email"><br>
+        </fieldset>
+        <!--------------------------------------------SUBMIT,RESET,BUTTON--------------------------------------------------->
+        <input type="submit">
+        <input type="reset">
+        <input type="button" value="Button" onclick="alert('Button clicked')"><!--just a button that returns a message-->
+        <button onclick="alert('Second button clicked')">Second button</button><!--buttons can be created as this way-->
+        <br>
+    </form>
+    <!-------------------------------------------------OUTPUT----------------------------------------------------------->
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="number" id="a" value="50">
+        +<input type="number" id="b" value="50">
+        =<output name="x" for="a b"></output>
+    </form>
+
+
+</body>
+</html>
