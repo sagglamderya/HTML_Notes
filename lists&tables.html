@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lists and Tables</title>
+</head>
+<body>
+    <ul style="list-style-type:circle"><!--unordered list--> <!---symbols of items can be changed with list-style-type-->
+        <li>unordered list element</li>
+        <li style="list-style-type: square;">unordered list element with square symbol</li> <!--symbols can be changed for some elements-->
+    </ul>
+
+    <ol type="I"> <!--ordered list--> <!---symbols of items can be changed with type-->
+        <li>ordered list element</li>
+        <li><img src="image.jpeg"/></li>
+    </ol>
+
+    <style>
+        table, tr, th, td{
+            border: 1px solid black; /*these are CSS codes*/
+            /*border-collapse:collapse can be used if none cellspacing or cellpading wanted*/
+            text-align: center;
+            background-color: aquamarine;
+        }
+    </style>
+
+    <table width="600" cellpadding="20" cellspacing="20"> <!--cellpadding is margins in cells, cellspacing is margins between cells-->
+        <caption style="font-size:20px;"><b>Caption of Table</b></caption>
+        <thead>
+            <tr><!--table row-->
+                <th>Header cell 1</th> <!--table header-->
+                <th>Header cell 2</th>
+                <th>Header cell 3</th>
+                <th colspan="2">Header cell 4 & 5</th> <!--if a column wanted to use for more than one column, colspan tag can be used -->
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Table element 1.1</td> <!--table dimension-->
+                <td>Table element 1.2</td>
+                <td rowspan="2">Table element 3</td> <!--if a row wanted to use for more than one row, rowspan tag can be used -->
+                <td>Table element 1.4</td>
+                <td>Table element 1.5</td>
+            </tr>
+            <tr>
+                <td>Table element 2.1</td>
+                <td>Table element 2.2</td>
+                <td>Table element 2.4</td>
+                <td>Table element 2.5</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
